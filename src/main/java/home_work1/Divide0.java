@@ -9,7 +9,7 @@ public class Divide0 {
         System.out.print("Введите число b: ");
         double b = scanner.nextInt();
 
-        try { // внутренний блок
+        try {
             System.out.println(a + " / " + b + " = " + a / b);
         } catch (ArithmeticException ex) {
             System.out.println("Попытка деления на ноль");
