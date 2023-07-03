@@ -18,6 +18,8 @@ import java.util.Scanner;
 //
 //Обратите внимание, что в этой задаче мы использовали собственное исключение InvalidInputException, чтобы явно
 // указать на некорректный ввод. Это помогает разделить обработку ошибок на соответствующие уровни абстракции.**
+
+// 2 - й вариант
 public class PowerCalculator {
     public static void main(String[] args) {
         try {
@@ -33,7 +35,7 @@ public class PowerCalculator {
             System.out.println("Произошла ошибка");
         }
     }
-    public static int getInt (String message){
+    public static int getInt(String message) {
         Scanner scanner = new Scanner(System.in);
         try {
             while (true) {
@@ -42,11 +44,10 @@ public class PowerCalculator {
                     return scanner.nextInt();
                 } catch (InputMismatchException ex) {
                     System.out.println("Ошибка: Введено некорректное число. Повторите ввод.");
-                    scanner.next();
+                    scanner.nextLine();
                 }
             }
         } finally {
-            scanner.close();
         }
     }
     public static double calculatePower(double base, int exponent) throws InvalidInputException {

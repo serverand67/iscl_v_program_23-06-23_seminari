@@ -41,7 +41,8 @@ public class PowerCalculator1 {
     }
 }
     class InvalidInputException1 extends Exception {
-        public InvalidInputException1(String message) {
+        public InvalidInputException1(String message)
+        {
             super(message);
         }
     }
