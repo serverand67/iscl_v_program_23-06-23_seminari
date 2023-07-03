@@ -52,7 +52,7 @@ public class PowerCalculator {
     }
     public static double calculatePower(double base, int exponent) throws InvalidInputException {
         if (base == 0 || exponent < 0) {
-            throw new InvalidInputException("Вы ввели некорректные числа");
+            throw new InvalidInputException("Вы ввели некорректные числа (основание = 0 или степень < 0)");
         }
         return Math.pow(base, exponent);
       }
